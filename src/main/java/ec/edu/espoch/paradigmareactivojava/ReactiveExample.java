@@ -13,9 +13,9 @@ public class ReactiveExample {
 
     public static void main(String[] args) {
 
-        Flux.just("Java", "C#", "Python")
-                .filter(s -> s.length() > 3)
-                .subscribe(System.out::println);
+        Flux.just("Java", "Python", "C++", "JavaScript", "Kotlin")
+        .filter(lenguaje -> lenguaje.length() >= 5)
+        .subscribe(System.out::println);
     }
 }
 
